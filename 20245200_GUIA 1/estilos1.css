@@ -1,0 +1,30 @@
+body {
+  background-color: lightblue;
+}
+
+.contenedor {
+  font-size: 20px;
+}
+
+.titulo {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.parrafo-1 {
+  color: navy;
+  font-weight: bold;
+}
+
+.parrafo-2 {
+  text-transform: uppercase;
+  text-align: justify;
+}
+
+.parrafo-3 {
+  font-size: 12px;
+}
+
+.italica {
+  font-style: italic;
+}

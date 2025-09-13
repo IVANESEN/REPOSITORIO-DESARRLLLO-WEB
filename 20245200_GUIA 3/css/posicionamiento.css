@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+header{
+    width: 100%;
+    height: 10vh;
+    background-color: #333;
+    color: white; 
+    padding: 20px;
+}
+
+header nav.menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.contenedor{
+    width: 90%;
+    margin: 12vh auto 10px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.contenedor.card{
+    width: 32.3%;
+    height: 200px;
+    margin: 100px 0.5%;
+    float: left;
+}
+
+/* Seleccionar segunda card */
+
+.contenedor.card:nth-child(2){
+    background-color: blue;
+    position: relative;
+   
+    left: 50px;
+    right: 20px;
+
+}
+
+.contenedor.card:nth-child(5){
+    background-color: blue;
+    position: relative;
+   
+    left: 50px;
+    right: 20px;
+
+}
+
+footer{
+  background-color: #333;
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  bottom:0;
+}
+
+footer p{
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    padding-top: 4vh ;
+}
