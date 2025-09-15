@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo formularios</title>
+</head>
+<body>
+    <main>
+        <form action="/20245200_GUIA 3/posicionamiento.html"method="POST">
+            <table>
+            
+            
+            <label for="nombre"> Nombre: </label>
+            <input type="text" id="nombre" name="name"
+            placeholder="Ingrese tu nombre" required>
+            <label for="apellido">Apellido</label>
+
+            <tr>
+                <td> <label for="fechaNacimiento">fechaNacimiento</label></td>
+                <td><input type="date" name="fechaNacimiento" id="fechaNacimiento"></td>
+            </tr>
+            <input type="text" id="apellido" name="apellido"placeholder="ingrese apellido">
+            <input type="submit" value="Registrarse">
+
+            <tr>
+                <id><label for="password">Ingrese tu contrasena</label></id>
+                <id><input type="password" name="password" id="password"
+                    placeholder="Ingrese tu password"required></id>
+            </TR>
+            <tr>
+                <td><label for="genero">Genero:</label></td>
+                <td>
+                    <input type="radio" name="genero" id="genero" value="femenino">
+                    <input type="radio" name="genero" id="genero" value="masculino">
+                </td>
+
+            </tr>
+            <tr>
+                <td><label for="materias">MATERIAS CURSADAS: </label></td>
+                <td><input type="number" value="5" name="materias" id="materias" Mis materias cursadas></td>
+
+            </tr>
+            <tr>
+                <td><label for="dui">DUI: </label></td>
+                <td><input type="text" id="dui" placeholder="Ingresa tu dui"
+                    required pattern="[0-9]{8}-[0-9]"></td>
+            </tr>
+            </table>
+        </form>
+    </main>
+
+</body>
+</html>
