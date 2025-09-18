@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    font-family: Arial;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    line-height: none;
+}
+
+nav li{
+    line-height: 2.5em;
+}
+
+nav a{
+    color: #ddd;
+    display: block;
+    padding: 0 2.5 em;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background: rgba(0,0,0,0.5);
+}
+
