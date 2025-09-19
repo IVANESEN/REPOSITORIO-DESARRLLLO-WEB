@@ -1,0 +1,103 @@
+@import url(http://fonts.googleapis.com/css?family=Didact+Gothic);
+
+*{ margin:0; padding:0; box-sizing:border-box; font-family:'Didact Gothic',sans-serif; }
+
+body{ background:#BBB; color:#444; }
+h1{ font-size:1.3em; text-align:center; color:#464d52; }
+
+#superior{
+  width:100%;
+  padding:30px 0;
+  background:#464d52;
+}
+
+#encabezado{
+  width:960px;
+  margin:0 auto;
+}
+
+#encabezado nav{
+  width:960px;
+}
+
+#logo{
+  display:block;
+  margin:0 0 10px 0;
+}
+
+nav ul{
+  list-style:none;
+  margin:0 0 20px 0;
+  padding-top:8px;
+  border-top:2px solid #fff;
+  overflow:hidden;
+}
+
+nav ul li{
+  float:left;
+  margin:0;
+}
+
+nav ul li a{
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  padding:.3em .6em;
+  margin:.3em .5em;
+}
+
+nav ul li a:hover{
+  color:#AAA;
+  transform:scale(1.25);
+}
+
+nav ul li a#inicio{
+  background:url(../img/turismo/home.png) no-repeat 0 3px;
+  padding-left:40px;
+}
+nav ul li a#planes{
+  background:url(../img/turismo/planes.png) no-repeat 0 3px;
+  padding-left:40px;
+}
+nav ul li a#galeria{
+  background:url(../img/turismo/galeria.png) no-repeat 0 3px;
+  padding-left:40px;
+}
+
+#imgDesc{
+  width:960px;
+  margin:0 auto;
+  overflow:hidden;
+}
+
+#imgDesc > img{
+  float:left;
+  width:600px;
+  height:360px;
+  object-fit:cover;
+}
+
+#descripcion{
+  float:left;
+  width:360px;
+  height:360px;
+  background:#888;
+}
+
+#descripcion p{
+  margin:20px;
+  color:#fff;
+  font-weight:bold;
+  line-height:180%;
+  text-align:justify;
+}
+
+#contenido{
+  width:960px;
+  margin:20px auto;
+}
+.plan{ float:left; width:32%; margin-right:2%; }
+.plan:nth-child(3){ margin-right:0; }
+.boton a{ display:inline-block; margin-top:8px; text-decoration:none; }
+
+/* STEP 21 */

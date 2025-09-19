@@ -119,6 +119,11 @@ section article:nth-child(2){
     background: rgba(0,0,0,0.05);
 }
 
+/* Pregunta 30 — Ojo: con position: relative; left:100px y top:50px se va a la DERECHA y ABAJO;
+   pero si lo querías a la izquierda y arriba, entonces usa negativos (left:-100px, top:-50px).
+   En resumen: positivo → derecha/abajo; negativo → izquierda/arriba. */
+
+
 section article:nth-child(2){
     position: absolute;
     left: 100px;
@@ -135,6 +140,16 @@ section article:nth-child(2){
     top: auto;
     background: transparent;
 }
+/* 31 — No: las otras cajas NO “tomaron” su lugar, porque con position: relative el 2º artículo conserva su espacio y solo se dibuja corrido. */
+
+/* 33 — Se desplazó tomando como origen el body, ya que no había un ancestro posicionado; por eso quedó a +100px (izq) y +50px (top) desde el body. */
+
+/* Paso 35 — Al poner absolute, el 2º artículo sale del flujo; entonces los demás
+   ocupan su lugar y el layout se reacomoda. Por eso “desaparece” su hueco original. */
+
+/* 36 — Relative mantiene el hueco y desplaza “pintura” desde su posición original; Absolute sale del flujo y se posiciona respecto al primer ancestro posicionado (si no hay, el body). */
+
+/* 40 — display:none oculta y además quita el espacio (los demás se recolocan); en cambio visibility:hidden oculta pero conserva el espacio (el layout no cambia). */
 
 section article:nth-child(2){
     display: none;
