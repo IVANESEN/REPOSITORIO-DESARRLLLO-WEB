@@ -153,3 +153,63 @@ header nav a:hover{
     justify-content: space-around;
     padding-top: 50px;
 }
+
+#caracteristicas{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    line-height: 3em;
+}
+
+#final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    height: 50vh;
+
+}
+
+footer{
+    background-color: rgb(245,245,245);
+}
+
+footer .container{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer{
+    padding: 15px;
+    color: rgb(100,100,100);
+}
+
+@media screen and(max-width:840px){
+    header.conatiner{
+        flex-direction: column;
+    }
+
+    header nav{
+        flex-direction: column;
+        padding-bottom: 25px;
+    }
+    
+    div .img-container{
+        display: none;
+    }
+
+    #somos .texto{
+    width: 100%;
+    max-width: 850px;
+}
+
+}
