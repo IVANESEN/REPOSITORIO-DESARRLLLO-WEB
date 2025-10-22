@@ -26,15 +26,15 @@ nav ul li a:hover{
   transform:scale(1.5);
 }
 nav ul li a#inicio{
-  background: url(img/turismo/home.png) no-repeat 0px 3px;
+  background: url(../img/turismo/home.png) no-repeat 0px 3px;
   padding-left: 40px;
 }
 nav ul li a#planes{
-  background: url(img/turismo/planes.png) no-repeat 0px 3px;
+  background: url(../img/turismo/planes.png) no-repeat 0px 3px;
   padding-left: 40px;
 }
 nav ul li a#galeria{
-  background: url(img/turismo/galeria.png) no-repeat 0px 3px;
+  background: url(../img/turismo/galeria.png) no-repeat 0px 3px;
   padding-left: 40px;
 }
 /* PARTE SUPERIOR */
@@ -73,20 +73,15 @@ QUE 960 px*/
 }
 /*Contenido principal de las paginas */
 #contenido{
-  width: 80%;
+  width: 90%;
   margin: 0px auto;
-  clear: left;
   overflow: auto;
-  min-width: 650px;/* YA NO REACCIONARA SI LA CAJA ES MAS PEQUEÑA DE
-650px*/
-  max-width: 960px;/*YA NO REACCIONARA SI LA CAJA ES MAS GRANDE QUE
-960 px*/
 }
 /* CONTENIDO DE LA PAGINA INDEX */
 .plan{
-  width: 26.7%; /* 258/960= 27%*/
-  padding: 2%; /* 20/960=2%*/
-  margin: 30px 1.5%;
+  width: 94%; /* 258/960= 27%*/
+  padding: 1.5%; /* 20/960=2%*/
+  margin: 20px 1.5%;
   background-color:white;
   border: solid 1px black;
   border-radius: 10px;
@@ -94,15 +89,14 @@ QUE 960 px*/
   text-align: justify;
 }
 .plan img{
-  width: 100%;
+  width: 50%;
+  height: auto;
+  float: left;
+  margin-right: 20px;
 }
-/* Primer div, cuarto div,... */
-#contenido div:nth-child(3n+1){
-  margin-left: 0px;
-}
-/* Tercer div, sexto div, .... */
-#contenido div:nth-child(3n){
-  margin-right: 0px;
+.boton{
+  width: 40%;
+  float: right;
 }
 /* CONTENIDO DE LA PAGINA PLANES */
 .planes{
@@ -127,12 +121,21 @@ QUE 960 px*/
 }
 /* CONTENIDO DE LA PAGINA GALERIA*/
 #galeria .plan{
-  font-size: 1em;
+  font-size: 0.8em;
   padding-bottom: 10px;
-  margin: 30px 1.4% 10px;
+  margin: 10px 1%;
   display: inline-block;
   float: none;
   vertical-align: top;
+  width: 44%;
   text-align: center;
   font-style: italic;
+}
+#galeria .plan p{
+  clear: both;
+}
+#galeria .plan img{
+  width: 90%;
+  height: auto;
+  margin: 5px 5%;
 }
