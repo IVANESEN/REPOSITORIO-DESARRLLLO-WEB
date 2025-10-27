@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portafolio Estudiantil — Iván Alessandro Vásquez Martínez</title>
-  <link rel="stylesheet" href="css/styleGuiaEj.css" />
+  <!-- Usa UNO de los dos CSS (elige el que prefieras) -->
+  <link rel="stylesheet" href="./css/styleGuiaEj.css" />
+  <!-- <link rel="stylesheet" href="./css/styleGuiaEj_creative.css" /> -->
 </head>
 <body>
   <header>
@@ -22,150 +24,86 @@
     </div>
   </header>
 
-  <main>
-    <!-- DATOS PERSONALES -->
-    <section id="datos-personales" class="card">
-      <h2>Datos personales</h2>
-      <div class="bio">
-        <div class="bio-img">
-          <!-- Reemplazar la ruta de ejemplo por la imagen real si lo desea -->
-          <img src="20245200_GUIA4/img/jovenyo.jpeg" alt="Fotografía de Iván Alessandro Vásquez Martínez" />
+  <main class="wrapper">
+    <!-- PAREJA SUPERIOR -->
+    <div class="duo">
+      <section id="datos-personales" class="card">
+        <h2>Datos personales</h2>
+        <div class="bio">
+          <div class="bio-img">
+            <img src="./20245200_GUIA4/img/jovenyo.jpeg" alt="Fotografía de Iván Alessandro Vásquez Martínez" />
+          </div>
+          <div class="bio-text">
+            <p><strong>Nombre:</strong> Iván Alessandro Vásquez Martínez</p>
+            <p><strong>Carnet:</strong> 20245200</p>
+            <p class="just">
+              Estudiante de Ingeniería de Software y Negocios Digitales. En <em>Desarrollo Web I</em> apliqué
+              HTML5 y CSS3 para maquetación semántica, modelo de caja, posicionamiento y diseño responsive
+              con <em>media queries</em>.
+            </p>
+          </div>
         </div>
-        <div class="bio-text">
-          <p><strong>Nombre:</strong> Iván Alessandro Vásquez Martínez</p>
-          <p><strong>Carnet:</strong> 20245200</p>
-          <p class="just">
-            Estudiante de Ingeniería de Software y Negocios Digitales, con interés en el diseño y
-            desarrollo de aplicaciones web. En la asignatura <em>Desarrollo Web I</em>, he aplicado
-            HTML5 y CSS3 para estructurar sitios modernos, incorporando buenas prácticas de maquetación,
-            estilos en cascada y diseño responsivo mediante <em>media queries</em>. Mi objetivo es
-            fortalecer mis habilidades en frontend, UI/UX y tecnologías web.
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- DATOS DE LA MATERIA -->
-    <section id="datos-materia" class="card">
-      <h2>Datos generales de la materia</h2>
-      <p><strong>Materia:</strong> Desarrollo Web I</p>
-      <p><strong>Docente:</strong> Ing. Guillermo Calderón</p>
-      <p class="just">
-        La asignatura introduce los fundamentos del desarrollo web moderno, desde la estructura y
-        sintaxis de HTML y CSS hasta el diseño adaptativo con <em>media queries</em>. Los contenidos
-        incluyen: modelo de caja, selectores avanzados, posicionamiento, visualización, maquetación
-        fija y fluida, y principios de diseño responsive para diferentes dispositivos.
-      </p>
-      <ul class="bullets">
-        <li><strong>Guía 1:</strong> Introducción a HTML y CSS.</li>
-        <li><strong>Guía 2:</strong> Selectores CSS avanzados y modelo de caja.</li>
-        <li><strong>Guía 3:</strong> Posicionamiento, visualización y maquetación.</li>
-        <li><strong>Guía 4:</strong> Introducción al responsive design.</li>
-      </ul>
-    </section>
+      <section id="datos-materia" class="card">
+        <h2>Datos generales de la materia</h2>
+        <p><strong>Materia:</strong> Desarrollo Web I</p>
+        <p><strong>Docente:</strong> Ing. Guillermo Calderón</p>
+        <p class="just">
+          Fundamentos de desarrollo web moderno: estructura semántica, reglas CSS, modelo de caja,
+          selectores avanzados, posicionamiento, visualización, maquetación fija/fluida y diseño adaptable.
+        </p>
+        <ul class="bullets">
+          <li><strong>Guía 1:</strong> Introducción a HTML y CSS.</li>
+          <li><strong>Guía 2:</strong> Selectores avanzados y modelo de caja.</li>
+          <li><strong>Guía 3:</strong> Posicionamiento, visualización y maquetación.</li>
+          <li><strong>Guía 4:</strong> Responsive design con <em>media queries</em>.</li>
+        </ul>
+      </section>
+    </div>
 
-    <!-- GUIAS Y EJERCICIOS -->
+    <!-- ÍNDICE DE GUÍAS (con tus enlaces exactos) -->
     <section id="guias" class="card">
       <h2>Índice de guías y ejercicios</h2>
 
-      <article class="guide">
-        <h3>Guía 1 — Introducción a HTML y CSS</h3>
-        <p class="just">
-          Estructura básica de documentos HTML y aplicación de estilos con CSS, utilizando estilos
-          embebidos, la etiqueta <code>&lt;style&gt;</code> y hojas de estilo externas.
-        </p>
-        <ul class="exercises">
-          <li>
-            <span class="ex-title">Ejercicio 1 — Estilos embebidos:</span>
-            Colorear fondo, alinear y formatear encabezados y párrafos.
-            <a href="20245200_GUIA 1/estilos_embebidos.html" target="_blank" class="link">Ver</a>
-          </li>
-          <li>
-            <span class="ex-title">Ejercicio 2 — Etiqueta &lt;style&gt;:</span>
-            Definir reglas CSS internas para tipografía, contenedores y clases personalizadas.
-            <a href="20245200_GUIA 1/ejemplo2.html" target="_blank" class="link">Ver</a>
-          </li>
-          <li>
-            <span class="ex-title">Ejercicio 3 — CSS externo:</span>
-            Enlazar un archivo <code>.css</code> y aplicar estilos globales.
-            <a href="20245200_GUIA 1/paises.html" target="_blank" class="link">Ver</a>
-          </li>
-        </ul>
-      </article>
+      <div class="list">
+        <article class="card" data-cat="HTML">
+          <h3>Guía 01 — Estructura básica de HTML</h3>
+          <div class="links">
+            <a class="primary" href="./20245200_GUIA%201/estilos_embebidos.html" target="_blank" rel="noopener">Estilos embebidos</a>
+            <a href="./20245200_GUIA%201/ejemplo2.html" target="_blank" rel="noopener">Ejercicio 2 de la guía</a>
+            <a href="./20245200_GUIA%201/paises.html" target="_blank" rel="noopener">Ejercicio de Paises</a>
+            <a href="./20245200_GUIA%201/miSerieEj1.html" target="_blank" rel="noopener">Ejercicio de SerieFavorita</a>
+          </div>
+        </article>
 
-      <article class="guide">
-        <h3>Guía 2 — Selectores avanzados y modelo de caja</h3>
-        <p class="just">
-          Uso de selectores descendientes, de hijos, adyacentes y de atributos; pseudo-clases y
-          pseudo-elementos, y aplicación del modelo de cajas (márgenes, bordes, rellenos).
-        </p>
-        <ul class="exercises">
-          <li>
-            <span class="ex-title">Ejercicio 1 — Sitio “El discurso del rey”:</span>
-            Aplicar selectores avanzados, enlaces con estados y efectos con <code>:hover</code>,
-            <code>:first-letter</code> y <code>:first-line</code>.
-            <a href="20245200_GUIA 2/pelicula.html" target="_blank" class="link">Ver</a>
-          </li>
-          <li>
-            <span class="ex-title">Ejercicio 2 — Tablero de damas:</span>
-            Construir un tablero 8×8 con <code>:nth-child()</code> alternando colores.
-            <a href="/20245200_GUIA 2/tablero.html" target="_blank" class="link">Ver</a>
-          </li>
-          <li>
-            <span class="ex-title">Ejercicio 3 - Biografía:</span>
-            Biografía de Iván Alessandro Vásquez llevada a cabo con los pasos. 
-            <a href="20245200_GUIA 2/miBiografia.html" target="_blank" class="link">Ver</a>
-          </li>
-        </ul>
-      </article>
+        <article class="card" data-cat="HTML">
+          <h3>Guía 02 — SELECTORES CSS AVANZADOS</h3>
+          <div class="links">
+            <a class="primary" href="./20245200_GUIA%202/pelicula.html" target="_blank" rel="noopener">Selectores avanzados</a>
+            <a href="./20245200_GUIA%202/tablero.html" target="_blank" rel="noopener">Ejercicio Tablero</a>
+            <a href="./20245200_GUIA%202/miBiografia.html" target="_blank" rel="noopener">Ejercicio Biografia</a>
+          </div>
+        </article>
 
-      <article class="guide">
-        <h3>Guía 3 — Posicionamiento, visualización y maquetación</h3>
-        <p class="just">
-          Práctica con <code>position</code>, <code>display</code>, <code>float</code>,
-          <code>overflow</code> y <code>z-index</code> para construir layouts fijos y fluidos, además de un
-          menú horizontal multinivel.
-        </p>
-        <ul class="exercises">
-          <li>
-            <span class="ex-title">Ejercicio 1 — Nominaciones a mejor película:</span>
-            Tres columnas con imágenes centradas, corrección de desvinculación por flotados y
-            ejemplos de posicionamiento relativo/absoluto.
-            <a href="20245200_GUIA 3/posicionamiento.html" target="_blank" class="link">Ver</a>
-          </li>
-          <li>
-            <span class="ex-title">Ejercicio 2 — Menú horizontal multinivel:</span>
-            Listas anidadas, ocultamiento/visualización con <code>display</code> y efecto
-            <code>:hover</code>.
-            <a href="20245200_GUIA 3/menu_horizontal.html" target="_blank" class="link">Ver</a>
-          </li>
-          <li>
-            <span class="ex-title">Ejercicio 3 — Agencia de viajes:</span>
-            Plantilla con encabezado, contenido y galería usando maquetación fija y luego fluida.
-            <a href="20245200_GUIA 3/index.html" target="_blank" class="link">Ver</a>
-          </li>
-        </ul>
-      </article>
+        <article class="card" data-cat="HTML">
+          <h3>Guía 03 — POSICIONAMIENTO, VISUAL Y MAQUETACIÓN</h3>
+          <div class="links">
+            <a class="primary" href="./20245200_GUIA%203/oscares.html" target="_blank" rel="noopener">Usando posicionamiento y visualización</a>
+            <a href="./20245200_GUIA%203/menu_horizontal.html" target="_blank" rel="noopener">Diseñando un menú horizontal multinivel</a>
+            <a href="./20245200_GUIA%203/index.html" target="_blank" rel="noopener">Construyendo un diseño fijo</a>
+          </div>
+        </article>
 
-      <article class="guide">
-        <h3>Guía 4 — Responsive Design</h3>
-        <p class="just">
-          Adaptación de estilos a móvil, tablet y desktop mediante <em>media queries</em>, estructuras
-          fluidas, tamaños relativos y hojas de estilo por dispositivo.
-        </p>
-        <ul class="exercises">
-          <li>
-            <span class="ex-title">Ejercicio 1 — Media queries:</span>
-            Definir puntos de quiebre para modificar colores, distribución y tipografías.
-            <a href="20245200_GUIA4/mediaqueries.html" target="_blank" class="link">Ver</a>
-          </li>
-          <li>
-            <span class="ex-title">Ejercicio 2 — Layout responsivo:</span>
-            Versión móvil, tablet y escritorio del sitio de agencia de viajes con hojas separadas.
-            <a href="20245200_GUIA4/index.html" target="_blank" class="link">Ver</a>
-          </li>
-        </ul>
-      </article>
+        <article class="card" data-cat="HTML">
+          <h3>GUIA 04 — Introducción al Responsive Design</h3>
+          <div class="links">
+            <a class="primary" href="./20245200_GUIA4/mediaqueries.html" target="_blank" rel="noopener">Mediaqueries ejemplo y ejercicio</a>
+            <a href="./20245200_GUIA4/index.html" target="_blank" rel="noopener">Ejercicio de página de viajes responsive</a>
+            <a href="./20245200_GUIA4/ejercicioGuia.html" target="_blank" rel="noopener">Wiki de guías y Desarrollo W. I</a>
+          </div>
+        </article>
+      </div>
     </section>
 
     <!-- FODA -->
@@ -175,33 +113,33 @@
         <div class="foda-col">
           <h4>Fortalezas</h4>
           <ul class="bullets">
-            <li>Estructuración semántica con HTML5 y estilos coherentes con CSS3.</li>
-            <li>Dominio del modelo de caja y corrección de problemas con flotados.</li>
-            <li>Manejo básico de media queries para vistas móvil y tablet.</li>
+            <li>Maquetación semántica y orden visual.</li>
+            <li>Manejo del modelo de caja.</li>
+            <li>Adaptación móvil/tablet con media queries.</li>
           </ul>
         </div>
         <div class="foda-col">
           <h4>Oportunidades</h4>
           <ul class="bullets">
-            <li>Aplicación de los conceptos en sitios reales y portafolios profesionales.</li>
-            <li>Explorar herramientas adicionales para prototipado y accesibilidad.</li>
-            <li>Refuerzo de UI/UX para mejorar la experiencia en dispositivos diversos.</li>
+            <li>Aplicación en proyectos reales.</li>
+            <li>Mejoras de accesibilidad.</li>
+            <li>Optimización de rendimiento.</li>
           </ul>
         </div>
         <div class="foda-col">
           <h4>Debilidades</h4>
           <ul class="bullets">
-            <li>Profundizar en posicionamiento complejo y efectos avanzados.</li>
-            <li>Perfeccionar la consistencia tipográfica y espaciados en layouts largos.</li>
-            <li>Optimizar imágenes y recursos para rendimiento.</li>
+            <li>Posicionamiento avanzado.</li>
+            <li>Consistencia tipográfica.</li>
+            <li>Documentación de estilos.</li>
           </ul>
         </div>
         <div class="foda-col">
           <h4>Amenazas</h4>
           <ul class="bullets">
-            <li>Rápida evolución de tecnologías y expectativas de la industria.</li>
-            <li>Limitaciones de tiempo para prácticas y mejoras continuas.</li>
-            <li>Diferencias de soporte entre navegadores y dispositivos.</li>
+            <li>Cambios rápidos del frontend.</li>
+            <li>Tiempo limitado de práctica.</li>
+            <li>Diferencias entre navegadores.</li>
           </ul>
         </div>
       </div>

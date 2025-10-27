@@ -1,168 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Índice de Guías — Iván Alessandro Vásquez (Desarrollo Web) 1 - Ing. Guillermo Calderón</title>
-  <meta name="description" content="Ing. Guillermo" />
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #0f172a;
-      --muted: #475569;
-      --card: #f1f5f9;
-      --border: #e2e8f0;
-      --accent: #2563eb;
-      --radius: 10px;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, "Helvetica Neue", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-    }
-    .wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px 56px; }
-    header h1 { margin: 0 0 6px; font-size: 24px; }
-    header p { margin: 0; color: var(--muted); }
-
-    .tools { display: flex; gap: 8px; margin: 16px 0 12px; flex-wrap: wrap; }
-    .tools input, .tools select {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 8px 10px;
-      background: #fff;
-      color: var(--text);
-      font-size: 14px;
-    }
-
-    .list { display: grid; grid-template-columns: 1fr; gap: 12px; }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 14px;
-    }
-    .card h3 { margin: 0 0 4px; font-size: 18px; }
-    .card p { margin: 0 0 8px; color: var(--muted); font-size: 14px; }
-    .meta { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
-    .links { display: flex; gap: 8px; flex-wrap: wrap; }
-    .links a { 
-      display: inline-block; text-decoration: none; 
-      padding: 8px 12px; border-radius: 999px; border: 1px solid var(--border);
-      background: #fff; color: var(--text); font-size: 13px;
-    }
-    .links a.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
-
-    footer { margin-top: 32px; color: var(--muted); font-size: 12px; text-align: center; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Estudiantil — Iván Alessandro Vásquez Martínez</title>
+  
+  <link rel="stylesheet" href="indexStyle.css" />
+  
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>Índice de Guías</h1>
-      <p>Alumno: <strong>Iván Alessandro Vásquez</strong> — Asignatura: <strong>Desarrollo Web</strong>. Pegue aquí los enlaces a cada guía y sus repositorios.</p>
-    </header>
+  <header>
+    <div class="wrapper">
+      <h1>Portafolio Estudiantil</h1>
+      <p class="subtitle">Desarrollo Web I — Ciclo 03-2025</p>
+      <nav>
+        <ul>
+          <li><a href="#datos-personales">Datos personales</a></li>
+          <li><a href="#datos-materia">Datos de la materia</a></li>
+          <li><a href="#guias">Índice de guías</a></li>
+          <li><a href="#foda">FODA</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <div class="tools">
-      <input id="q" type="search" placeholder="Buscar guía…" aria-label="Buscar guía" />
-      <select id="cat" aria-label="Filtrar por categoría">
-        <option value="">Todas las categorías</option>
-        <option value="HTML">HTML</option>
-        <option value="CSS">CSS</option>
-        <option value="JavaScript">JavaScript</option>
-        <option value="Proyecto">Proyecto</option>
-      </select>
+  <main class="wrapper">
+    
+    <div class="duo">
+      <section id="datos-personales" class="card">
+        <h2>Datos personales</h2>
+        <div class="bio">
+          <div class="bio-img">
+            <img src="./20245200_GUIA4/img/jovenyo.jpeg" alt="Fotografía de Iván Alessandro Vásquez Martínez" />
+          </div>
+          <div class="bio-text">
+            <p><strong>Nombre:</strong> Iván Alessandro Vásquez Martínez</p>
+            <p><strong>Carnet:</strong> 20245200</p>
+            <p class="just">
+              Estudiante de Ingeniería de Software y Negocios Digitales. En <em>Desarrollo Web I</em> apliqué
+              HTML5 y CSS3 para maquetación semántica, modelo de caja, posicionamiento y diseño responsive
+              con <em>media queries</em>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="datos-materia" class="card">
+        <h2>Datos generales de la materia</h2>
+        <p><strong>Materia:</strong> Desarrollo Web I</p>
+        <p><strong>Docente:</strong> Ing. Guillermo Calderón</p>
+        <p class="just">
+          Fundamentos de desarrollo web moderno: estructura semántica, reglas CSS, modelo de caja,
+          selectores avanzados, posicionamiento, visualización, maquetación fija/fluida y diseño adaptable.
+        </p>
+        <ul class="bullets">
+          <li><strong>Guía 1:</strong> Introducción a HTML y CSS.</li>
+          <li><strong>Guía 2:</strong> Selectores avanzados y modelo de caja.</li>
+          <li><strong>Guía 3:</strong> Posicionamiento, visualización y maquetación.</li>
+          <li><strong>Guía 4:</strong> Responsive design con <em>media queries</em>.</li>
+        </ul>
+      </section>
     </div>
 
-    <section id="lista" class="list">
+    
+    <section id="guias" class="card">
+      <h2>Índice de guías y ejercicios</h2>
 
-   
-      <article class="card" data-cat="HTML">
-        <h3>Guía 01 — Estructura básica de HTML</h3>
-   
-        <div class="links">
-   >
-          <a class="primary" href="20245200_GUIA 1/estilos_embebidos.html" target="_blank" rel="noopener">Estilos embebidos</a>
-     
-          <a href="20245200_GUIA 1/ejemplo2.html" target="_blank" rel="noopener">Ejercicio 2 de la guía</a>
+      <div class="list">
+        <article class="card" data-cat="HTML">
+          <h3>Guía 01 — Estructura básica de HTML</h3>
+          <div class="links">
+            <a class="primary" href="./20245200_GUIA%201/estilos_embebidos.html" target="_blank" rel="noopener">Estilos embebidos</a>
+            <a href="./20245200_GUIA%201/ejemplo2.html" target="_blank" rel="noopener">Ejercicio 2 de la guía</a>
+            <a href="./20245200_GUIA%201/paises.html" target="_blank" rel="noopener">Ejercicio de Paises</a>
+            <a href="./20245200_GUIA%201/miSerieEj1.html" target="_blank" rel="noopener">Ejercicio de SerieFavorita</a>
+          </div>
+        </article>
 
-          <a href="20245200_GUIA 1/paises.html" target="_blank" rel="noopener">Ejercicio de Paises</a>
+        <article class="card" data-cat="HTML">
+          <h3>Guía 02 — SELECTORES CSS AVANZADOS</h3>
+          <div class="links">
+            <a class="primary" href="./20245200_GUIA%202/pelicula.html" target="_blank" rel="noopener">Selectores avanzados</a>
+            <a href="./20245200_GUIA%202/tablero.html" target="_blank" rel="noopener">Ejercicio Tablero</a>
+            <a href="./20245200_GUIA%202/miBiografia.html" target="_blank" rel="noopener">Ejercicio Biografia</a>
+          </div>
+        </article>
 
-          <a href="20245200_GUIA 1/miSerieEj1.html" target="_blank" rel="noopener">Ejercicio de SerieFavorita</a>
-        </div>
-      </article>
+        <article class="card" data-cat="HTML">
+          <h3>Guía 03 — POSICIONAMIENTO, VISUAL Y MAQUETACIÓN</h3>
+          <div class="links">
+            <a class="primary" href="./20245200_GUIA%203/oscares.html" target="_blank" rel="noopener">Usando posicionamiento y visualización</a>
+            <a href="./20245200_GUIA%203/menu_horizontal.html" target="_blank" rel="noopener">Diseñando un menú horizontal multinivel</a>
+            <a href="./20245200_GUIA%203/index.html" target="_blank" rel="noopener">Construyendo un diseño fijo</a>
+          </div>
+        </article>
 
-      <article class="card" data-cat="HTML">
-        <h3>Guía 02 — SELECTORES CSS AVANZADOS</h3>
-   
-        <div class="links">
-  >
-          <a class="primary" href="20245200_GUIA 2/pelicula.html" target="_blank" rel="noopener">Selectores avanzados</a>
-     
-          <a href="20245200_GUIA 2/tablero.html" target="_blank" rel="noopener">Ejercicio Tablero</a>
-
-          <a href="20245200_GUIA 2/miBiografia.html" target="_blank" rel="noopener">Ejercicio Biografia</a>
-        </div>
-      </article>
-
-    <article class="card" data-cat="HTML">
-        <h3>Guía 03 — POSICIONAMIENTO, VISUAL Y MAQUETACIÓN</h3>
-   
-        <div class="links">
-   >
-          <a class="primary" href="20245200_GUIA 3/oscares.html" target="_blank" rel="noopener">Usando posicionamiento y visualización</a>
-     
-          <a href="20245200_GUIA 3/menu_horizontal.html" target="_blank" rel="noopener">Diseñando un menú horizontal multinivel</a>
-
-          <a href="20245200_GUIA 3/index.html" target="_blank" rel="noopener">Construyendo un diseño fijo</a>
-
-      
-        </div>
-      </article>
-     <article class="card" data-cat="HTML">
-        <h3>GUIA 04 - Introducción al Responsive Design</h3>
-   
-        <div class="links">
-   >
-          <a class="primary" href="/20245200_GUIA4/mediaqueries.html" target="_blank" rel="noopener">Mediaqueries ejemplo y ejercicio</a>
-     
-          <a href="20245200_GUIA4/index.html" target="_blank" rel="noopener">Ejercicio de página de viajes responsive</a>
-
-          <a href="20245200_GUIA4/ejercicioGuia.html" target="_blank" rel="noopener">Wiki de guias y Desarrollo W. I</a>
-
-          <a href="20245200_GUIA 3/analisis.html" target="_blank" rel="noopener">Ejercicio complemetario: posicionamiento y Z- Index</a>
-
-          <a href="20245200_GUIA 3/ejercicio3.html" target="_blank" rel="noopener">Ejercicio complemetario: diseño fijo actualización</a>
-        </div>
-      </article>
+        <article class="card" data-cat="HTML">
+          <h3>GUIA 04 — Introducción al Responsive Design</h3>
+          <div class="links">
+            <a class="primary" href="./20245200_GUIA4/mediaqueries.html" target="_blank" rel="noopener">Mediaqueries ejemplo y ejercicio</a>
+            <a href="./20245200_GUIA4/index.html" target="_blank" rel="noopener">Ejercicio de página de viajes responsive</a>
+            <a href="./20245200_GUIA4/ejercicioGuia.html" target="_blank" rel="noopener">Wiki de guías y Desarrollo W. I</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <footer>
-    </footer>
-  </div>
+   
+    <section id="foda" class="card">
+      <h2>FODA — Desempeño en las guías</h2>
+      <div class="foda">
+        <div class="foda-col">
+          <h4>Fortalezas</h4>
+          <ul class="bullets">
+            <li>Maquetación semántica y orden visual.</li>
+            <li>Manejo del modelo de caja.</li>
+            <li>Adaptación móvil/tablet con media queries.</li>
+          </ul>
+        </div>
+        <div class="foda-col">
+          <h4>Oportunidades</h4>
+          <ul class="bullets">
+            <li>Aplicación en proyectos reales.</li>
+            <li>Mejoras de accesibilidad.</li>
+            <li>Optimización de rendimiento.</li>
+          </ul>
+        </div>
+        <div class="foda-col">
+          <h4>Debilidades</h4>
+          <ul class="bullets">
+            <li>Posicionamiento avanzado.</li>
+            <li>Consistencia tipográfica.</li>
+            <li>Documentación de estilos.</li>
+          </ul>
+        </div>
+        <div class="foda-col">
+          <h4>Amenazas</h4>
+          <ul class="bullets">
+            <li>Cambios rápidos del frontend.</li>
+            <li>Tiempo limitado de práctica.</li>
+            <li>Diferencias entre navegadores.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <script>
- 
-    const q = document.getElementById('q');
-    const cat = document.getElementById('cat');
-    const list = document.getElementById('lista');
-
-    function applyFilters() {
-      const term = (q.value || '').toLowerCase();
-      const c = cat.value;
-      const items = list.querySelectorAll('.card');
-      items.forEach(card => {
-        const matchesText = card.textContent.toLowerCase().includes(term);
-        const matchesCat = !c || card.getAttribute('data-cat') === c;
-        card.style.display = (matchesText && matchesCat) ? '' : 'none';
-      });
-    }
-
-    q.addEventListener('input', applyFilters);
-    cat.addEventListener('change', applyFilters);
-  </script>
+  <footer>
+    <p>&copy; 2025 — Iván Alessandro Vásquez Martínez — Desarrollo Web I</p>
+  </footer>
 </body>
 </html>
