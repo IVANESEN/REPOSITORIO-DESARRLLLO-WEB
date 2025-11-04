@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../js/numeroAleatorio.js"></script>
+    <script src="../js/numeroAleatorio.js" defer></script>
     <link href="../css/style-1.css" rel="stylesheet"/>
-
     <title>Adivinando un número</title>
 </head>
 <body>
     <div class="container">
-        <h1>Adivinando un número (rango1-25)</h1>
+        <h1>Adivinando un número (rango 1-25)</h1>
         <div class="flex-container">
-            <button id="idBtnNumero" onclick="generarNumeroAleatorio()">Adibvina el número</button>
-
+            <input type="number" id="idInputNumero" min="1" max="25" placeholder="Escribe un número">
+            <button id="idBtnNumero">Comprobar</button>
         </div>
         <p id="idParrafo"></p>
         <a href="../index.html">Regresar</a>

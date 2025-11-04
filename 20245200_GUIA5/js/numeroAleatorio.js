@@ -1,26 +1,21 @@
-const numeroAleatorio=Math.floor(Math.random()*25)+1;
-const numeroIntentos=3;
-let intentos=1;
-function generarNumeroAleatorio(){
-    let mensaje;
-    const parrafo=document.querySelector("#idParrafo");
-    if (intentos <=numeroIntentos){
-        let numero=prompt(
-            "¿Qué número se ha generado(Intento"+ intentos + ")?"
-        );
-    }
-    if(numero== numeroAleatorio){
-        mensaje=`Es sorprendente, pudiste adivinarlo (${numeroAleatorio}).
-        Refresque la page para volver a jugar`;
-    } else if(intentos==numeroIntentos){
-        mensaje=`Su numero de intentos ha terminado.
-        El numero oculto era: ${numeroAleatorio}. Refresque la page para volver a jugar`;
+const numeroSecreto = Math.floor(Math.random() * 25) + 1;
+const inputNumero = document.getElementById("idInputNumero");
+const btnNumero = document.getElementById("idBtnNumero");
+const parrafo = document.getElementById("idParrafo");
 
+btnNumero.addEventListener("click", function() {
+    const valorUsuario = parseInt(inputNumero.value);
 
-    }else {
-        mensaje=`Su numero de intentos ha terminado.
-        El numero oculto era: ${numeroAleatorio}. Refresqye la pagina patra volver a jugar`;
+    if (isNaN(valorUsuario)) {
+        parrafo.textContent = "Por favor, ingresa un número válido.";
+        return;
     }
-    parrafo.innerHTML= mensaje;
 
+    if (valorUsuario === numeroSecreto) {
+        parrafo.textContent = "¡Correcto! Adivinaste el número.";
+    } else if (valorUsuario < numeroSecreto) {
+        parrafo.textContent = "No es ese. El número que buscas es más alto.";
+    } else {
+        parrafo.textContent = "No es ese. El número que buscas es más bajo.";
     }
+});
