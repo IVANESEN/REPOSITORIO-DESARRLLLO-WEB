@@ -4,65 +4,152 @@ const button = document.forms["frmRegistro"].elements["btnRegistro"];
 const modal = new bootstrap.Modal(document.getElementById("idModal"), {});
 const bodyModal = document.getElementById("idBodyModal");
 
-const recorrerFormulario = function () {
-  let totText = 0;
-  let totRadio = 0;
-  let totCheck = 0;
-  let totDate = 0;
-  let totSelect = 0;
-  let totFile = 0;
-  let totPass = 0;
-  let totEmail = 0;
+const esEmailValido = (correo) => {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(correo);
+};
 
-  let elementos = formulario.elements;
-  let totalElementos = elementos.length;
+const validarFormulario = () => {
+  const nombre = document.getElementById("idNombre");
+  const apellido = document.getElementById("idApellido");
+  const fechaNacimiento = document.getElementById("idFechaNacimiento");
+  const correo = document.getElementById("idCorreo");
+  const password = document.getElementById("idPassword");
+  const repetirPassword = document.getElementById("idRepetirPassword");
+  const cmbCarrera = document.getElementById("idCmbCarrera");
+  const cmbPais = document.getElementById("idCmbPais");
+  const intereses = document.querySelectorAll(".clsInteres");
 
-  for (let index = 0; index < totalElementos; index++) {
-    let elemento = elementos[index];
-    let tipoElemento = elemento.type;
-    let tipoNode = elemento.nodeName;
+  const controlesObligatorios = [
+    nombre,
+    apellido,
+    fechaNacimiento,
+    correo,
+    password,
+    repetirPassword
+  ];
 
-    if (tipoElemento == "text" && tipoNode == "INPUT") {
-      console.log(elemento);
-      totText++;
-    } else if (tipoElemento == "password" && tipoNode == "INPUT") {
-      console.log(elemento);
-      totPass++;
-    } else if (tipoElemento == "email" && tipoNode == "INPUT") {
-      console.log(elemento);
-      totEmail++;
-    } else if (tipoElemento == "radio" && tipoNode == "INPUT") {
-      console.log(elemento);
-      totRadio++;
-    } else if (tipoElemento == "checkbox" && tipoNode == "INPUT") {
-      console.log(elemento);
-      totCheck++;
-    } else if (tipoElemento == "file" && tipoNode == "INPUT") {
-      console.log(elemento);
-      totFile++;
-    } else if (tipoElemento == "date" && tipoNode == "INPUT") {
-      console.log(elemento);
-      totDate++;
-    } else if (tipoNode == "SELECT") {
-      console.log(elemento);
-      totSelect++;
+  let mensajes = [];
+  let esValido = true;
+
+  controlesObligatorios.forEach((control) => {
+    if (control && control.value.trim() === "") {
+      esValido = false;
+      mensajes.push("Todos los campos de texto son obligatorios.");
+    }
+  });
+
+  if (fechaNacimiento && fechaNacimiento.value !== "") {
+    const hoy = new Date();
+    const fn = new Date(fechaNacimiento.value);
+    if (fn > hoy) {
+      esValido = false;
+      mensajes.push("La fecha de nacimiento no puede ser mayor que la fecha actual.");
     }
   }
 
-  let resultado = `
-    Total de input[type="text"] = ${totText}<br>
-    Total de input[type="password"] = ${totPass}<br>
-    Total de input[type="radio"] = ${totRadio}<br>
-    Total de input[type="checkbox"] = ${totCheck}<br>
-    Total de input[type="date"] = ${totDate}<br>
-    Total de input[type="email"] = ${totEmail}<br>
-    Total de select = ${totSelect}<br>
-  `;
+  if (correo && correo.value.trim() !== "" && !esEmailValido(correo.value.trim())) {
+    esValido = false;
+    mensajes.push("El correo electrónico no tiene un formato válido.");
+  }
 
-  bodyModal.innerHTML = resultado;
+  if (password && repetirPassword) {
+    if (password.value !== repetirPassword.value) {
+      esValido = false;
+      mensajes.push("La contraseña y la repetición deben ser iguales.");
+    }
+  }
+
+  let tieneInteres = false;
+  intereses.forEach((chk) => {
+    if (chk.checked) {
+      tieneInteres = true;
+    }
+  });
+  if (!tieneInteres) {
+    esValido = false;
+    mensajes.push("Debe seleccionar al menos un interés.");
+  }
+
+  if (cmbCarrera && (cmbCarrera.value === "" || cmbCarrera.value === "0")) {
+    esValido = false;
+    mensajes.push("Debe seleccionar una carrera.");
+  }
+
+  if (cmbPais && (cmbPais.value === "" || cmbPais.value === "0")) {
+    esValido = false;
+    mensajes.push("Debe seleccionar un país de origen.");
+  }
+
+  if (!esValido) {
+    alert(mensajes.join("\n"));
+    return;
+  }
+
+  while (bodyModal.firstChild) {
+    bodyModal.removeChild(bodyModal.firstChild);
+  }
+
+  const tabla = document.createElement("table");
+  tabla.className = "table table-striped table-bordered";
+
+  const thead = document.createElement("thead");
+  const trHead = document.createElement("tr");
+  const encabezados = [
+    "Nombre completo",
+    "Fecha nacimiento",
+    "Correo",
+    "Carrera",
+    "País",
+    "Intereses"
+  ];
+
+  encabezados.forEach((texto) => {
+    const th = document.createElement("th");
+    th.textContent = texto;
+    trHead.appendChild(th);
+  });
+
+  thead.appendChild(trHead);
+  tabla.appendChild(thead);
+
+  const tbody = document.createElement("tbody");
+  const trBody = document.createElement("tr");
+
+  const nombreCompleto = `${nombre.value} ${apellido.value}`;
+  const interesesSeleccionados = [];
+  intereses.forEach((chk) => {
+    if (chk.checked) {
+      const label = chk.nextElementSibling;
+      if (label) {
+        interesesSeleccionados.push(label.textContent.trim());
+      }
+    }
+  });
+
+  const datos = [
+    nombreCompleto,
+    fechaNacimiento.value,
+    correo.value,
+    cmbCarrera.options[cmbCarrera.selectedIndex].text,
+    cmbPais.options[cmbPais.selectedIndex].text,
+    interesesSeleccionados.join(", ")
+  ];
+
+  datos.forEach((texto) => {
+    const td = document.createElement("td");
+    td.textContent = texto;
+    trBody.appendChild(td);
+  });
+
+  tbody.appendChild(trBody);
+  tabla.appendChild(tbody);
+
+  bodyModal.appendChild(tabla);
   modal.show();
 };
 
-button.onclick = () => {
-  recorrerFormulario();
+button.onclick = (event) => {
+  event.preventDefault();
+  validarFormulario();
 };
