@@ -20,4 +20,13 @@ const imprimir = (numero, resultado) => {
 };
 
 function calcular() {
-  const nume
+  const numero = document.getElementById("idTxtNumero").value;
+  if (numero !== "") {
+    const resultado = calcularFactorial(numero);
+    imprimir(numero, resultado);
+  } else {
+    alert("Debe ingresar un número válido");
+  }
+}
+
+boton.addEventListener("click", calcular);
