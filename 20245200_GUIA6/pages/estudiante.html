@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <title>Validación ficha de estudiante</title>
+</head>
+<body>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12 shadow-lg p-4 bg-body rounded">
+      <h3>Ficha de estudiante (validada con expresiones regulares)</h3>
+
+      <form id="formEstudiante" novalidate>
+        <div class="mb-3">
+          <label for="txtCarnet" class="form-label">Carnet (AB001)</label>
+          <input type="text" class="form-control" id="txtCarnet" />
+          <div class="invalid-feedback">Formato: dos letras y tres números. Ej: AB001.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="txtNombreCompleto" class="form-label">Nombre completo</label>
+          <input type="text" class="form-control" id="txtNombreCompleto" />
+          <div class="invalid-feedback">Solo letras y espacios.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="txtDui" class="form-label">DUI</label>
+          <input type="text" class="form-control" id="txtDui" placeholder="########-#" />
+          <div class="invalid-feedback">Formato: ########-#</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="txtNit" class="form-label">NIT</label>
+          <input type="text" class="form-control" id="txtNit" placeholder="####-######-###-#" />
+          <div class="invalid-feedback">Formato: ####-######-###-#</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="txtFechaNac" class="form-label">Fecha de nacimiento (dd/mm/aaaa)</label>
+          <input type="text" class="form-control" id="txtFechaNac" placeholder="31/12/2000" />
+          <div class="invalid-feedback">Usá el formato día/mes/año.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="txtCorreo" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="txtCorreo" />
+          <div class="invalid-feedback">Ingresá un correo válido.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="txtEdad" class="form-label">Edad</label>
+          <input type="text" class="form-control" id="txtEdad" />
+          <div class="invalid-feedback">Solo números.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Validar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../js/estudiante.js"></script>
+</body>
+</html>
