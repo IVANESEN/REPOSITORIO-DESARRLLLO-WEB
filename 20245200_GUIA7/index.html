@@ -1,170 +1,64 @@
-<!-- ICI | Hero BNPL con logo "ICI para empresas" (title gradiente blanco + glow celeste) -->
-<section class="neo-hero" aria-label="ICI para empresas - Créditos y BNPL">
-  <div class="neo__container">
-    <!-- Logo brand -->
-    <div class="neo__brand">
-      <img
-        src="{{ 'iciparaempresas.png' | asset_url }}"
-        alt="ICI para empresas"
-        width="460" height="68"
-        loading="eager" decoding="async"
-      />
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="icon" href="img/js.png" sizes="32x32" type="image/png" />
+    <title>Objetos en JavaScript</title>
+
+</head>
+
+<body>
+
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src="./img/js.png" class="bi me-2" width="48" height="48">
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="pages/ejemplo1.html" class="nav-link px-2 text-white">Ejemplo 1</a></li>
+                    <li><a href="pages/ejemplo2.html" class="nav-link px-2 text-white">Ejemplo 2</a></li>
+                    <li><a href="pages/ejemplo3.html" class="nav-link px-2 text-white">Ejemplo 3</a></li>
+                    <li><a href="pages/ejemplo4.html" class="nav-link px-2 text-white">Ejemplo 4</a></li>                    
+                </ul>   
+                
+                <div class="text-end">
+                    <button type="button" id="idBtnDiv" class="btn btn-outline-light me-2"># de etiqueta &lt;div&gt;</button>
+                    <button type="button" id="idBtnButton" class="btn btn-warning"># de etiqueta &lt;button&gt;</button>
+                </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="px-4 py-5 my-5 text-center">
+            <img class="d-block mx-auto mb-4" src="./img/dom.png" alt="Documente Object Model">
+            <h1 class="display-5 fw-bold">¿Qué es el DOM?</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">
+                    Las siglas <span class="fw-bold">DOM</span> significan <span class="fw-bold">Document Object Model</span>, 
+                    o lo que es lo mismo, la estructura del documento HTML. Una página HTML está formada por múltiples etiquetas HTML, 
+                    anidadas una dentro de otra, formando un árbol de etiquetas relacionadas entre sí, que se 
+                    denomina <span class="fw-bold">árbol DOM</span> (o simplemente DOM).
+                </p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <button type="button" id="idBtnSpan" class="btn btn-primary btn-lg px-4 gap-3"># de etiqueta &lt;span&gt;</button>
+                    <button type="button" id="idBtnP" class="btn btn-outline-secondary btn-lg px-4"># etiqueta &lt;p&gt;</button>
+                </div>
+            </div>
+        </div>       
+
     </div>
 
-    <!-- Título -->
-    <h2 class="neo__title">
-      Compras empresariales más ágiles.
-      <br class="lg-only" />
-      Financiamiento y modelos de crédito para tu operación.
-    </h2>
 
-    <p class="neo__subtitle">
-      Simplificá adquisiciones, preservá tu flujo de caja y ganá visibilidad en cada pedido.
-    </p>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js" defer></script>
 
-    <div class="neo__ctas" role="group" aria-label="Acciones principales">
-      <a class="neo__btn neo__btn--primary" href="/pages/contacto" target="_blank" rel="noopener">
-        Aplicar a ICI créditos
-      </a>
-      <a class="neo__btn neo__btn--ghost" href="/pages/asesoria">
-        Hablar con un especialista
-      </a>
-    </div>
+</body>
 
-    <ul class="neo__badges" role="list" aria-label="Ventajas">
-      <li class="neo__badge" role="listitem">
-        <span class="neo__ico" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path>
-          </svg>
-        </span>
-        Evaluación en horas
-      </li>
-      <li class="neo__badge" role="listitem">
-        <span class="neo__ico" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M17 1l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
-            <path d="M7 23l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
-          </svg>
-        </span>
-        Integración con compras recurrentes
-      </li>
-      <li class="neo__badge" role="listitem">
-        <span class="neo__ico" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 12a9 9 0 1 1 18 0"></path>
-            <path d="M7 12v6a2 2 0 0 0 2 2h1"></path>
-            <path d="M17 12v6a2 2 0 0 1-2 2h-1"></path>
-          </svg>
-        </span>
-        Soporte dedicado
-      </li>
-    </ul>
-  </div>
-</section>
-
-<style>
-  /* ===== Tokens (acento #1EA4D9) ===== */
-  .neo-hero{
-    --deep:#0B0B10;
-    --ink:#DDE1FF;
-    --pure:#FFFFFF;
-    --c1:#1EA4D9;        /* color principal */
-    --c1-light:#66CBE8;  /* variante clara */
-    --c1-dark:#0F6FA0;   /* variante oscura */
-    --bd:rgba(255,255,255,.12);
-    --shadow:0 30px 80px rgba(0,0,0,.55);
-
-    /* Glow superior reforzado */
-    background:
-      radial-gradient(1200px 360px at 50% 0%, rgba(30,164,217,.55), transparent 75%),
-      linear-gradient(180deg, #0B0B10 20%, #0B0B10 100%);
-    color:var(--pure);
-    padding: clamp(40px, 7vw, 110px) 0 clamp(32px, 6vw, 80px);
-    position:relative; overflow:hidden;
-  }
-  /* Glow inferior reforzado */
-  .neo-hero::after{
-    content:""; position:absolute; left:10%; right:10%; bottom:-10%;
-    height:260px; filter:blur(70px); opacity:.85;
-    background: radial-gradient(70% 110% at 50% 0, rgba(30,164,217,.50), transparent 70%);
-    pointer-events:none;
-  }
-  /* Banda suave central opcional para más cuerpo al brillo */
-  .neo-hero::before{
-    content:"";
-    position:absolute; inset: 0 10% auto 10%;
-    top: 36%;
-    height: 140px;
-    background: radial-gradient(60% 120% at 50% 50%, rgba(30,164,217,.22), transparent 70%);
-    filter: blur(40px);
-    pointer-events:none;
-  }
-
-  .neo__container{ width:min(1200px, 92%); margin-inline:auto; }
-
-  /* ===== Logo ===== */
-  .neo__brand{
-    display:flex; align-items:center;
-    margin: 0 0 clamp(16px, 3vw, 24px);
-  }
-  .neo__brand img{
-    width: clamp(180px, 28vw, 420px);
-    height:auto;
-    display:block;
-    filter: drop-shadow(0 8px 22px rgba(30,164,217,.35));
-  }
-
-  /* ===== Título con gradiente blanco ===== */
-  .neo__title{
-    margin:0 0 12px; font-weight:900; line-height:1.06;
-    font-size: clamp(30px, 6.2vw, 70px);
-    color: transparent;
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.82) 60%, rgba(255,255,255,.70) 100%);
-    -webkit-background-clip: text;
-            background-clip: text;
-  }
-  .lg-only{ display:none; }
-  @media (min-width: 992px){ .lg-only{ display:inline; } }
-
-  .neo__subtitle{
-    margin:0 0 24px; max-width: 68ch; color:var(--ink);
-    font-size: clamp(15px,2vw,20px); line-height:1.65;
-  }
-
-  /* ===== CTAs ===== */
-  .neo__ctas{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:18px; }
-  .neo__btn{
-    display:inline-flex; align-items:center; justify-content:center;
-    border-radius:999px; padding:12px 18px; text-decoration:none; font-weight:800; letter-spacing:.2px;
-    box-shadow: var(--shadow); transition: transform .15s ease, filter .15s ease, box-shadow .15s ease;
-    border:1px solid transparent;
-  }
-  .neo__btn--primary{
-    color:#fff;
-    background: linear-gradient(135deg, var(--c1-light) 0%, var(--c1) 50%, var(--c1-dark) 100%);
-  }
-  .neo__btn--primary:hover{ transform: translateY(-1px); filter:brightness(1.05); }
-  .neo__btn--ghost{
-    color:#fff; background:transparent; border-color:var(--bd);
-  }
-  .neo__btn--ghost:hover{ transform: translateY(-1px); border-color:rgba(255,255,255,.22); }
-
-  /* ===== Badges ===== */
-  .neo__badges{
-    display:flex; flex-wrap:wrap; gap:10px; margin:0; padding:0; list-style:none;
-  }
-  .neo__badge{
-    display:inline-flex; align-items:center; gap:8px;
-    padding:8px 12px; border-radius:999px;
-    color:#fff; background: rgba(255,255,255,.06); border:1px solid var(--bd);
-    font-weight:700; font-size:13px; backdrop-filter: blur(4px);
-  }
-  .neo__ico{ display:grid; place-items:center; color:var(--c1); }
-
-  /* ===== Responsivo fino ===== */
-  @media (max-width: 640px){
-    .neo__brand{ justify-content:flex-start; }
-    .neo__ctas .neo__btn{ width:100%; max-width: 360px; }
-  }
-</style>
+</html>
